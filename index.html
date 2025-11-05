@@ -1,21 +1,10 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Busca pela Cidade Perdida</title>
-    <style>
-        /* Estilos básicos para a demonstração */
-        body { font-family: sans-serif; text-align: center; margin: 20px; background-color: #f4f4f4; }
-        .passo { display: none; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        .passo img { max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 15px; }
-        .passo p { font-size: 1.1em; line-height: 1.5; color: #333; }
-        .btn-proximo { padding: 10px 20px; margin: 5px; font-size: 1em; cursor: pointer; background-color: #4CAF50; color: white; border: none; border-radius: 5px; transition: background-color 0.3s ease; }
-        .btn-proximo:hover { background-color: #45a049; }
-        .btn-proximo.voltar { background-color: #f44336; }
-        .btn-proximo.voltar:hover { background-color: #da190b; }
-        .passo.ativo { display: block; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -24,65 +13,32 @@
     <!-- Passo 0: Introdução -->
     <div class="passo ativo" id="passo-0">
         <img src="img/cenario-passo0.png" alt="Livro com uma carta antiga">
-        <p>Um dia desses, dentro de um livro da biblioteca da escola, descobri uma carta antiga sobre uma cidade perdida, escondida por riquezas e belezas naturais. Nessa carta, a autora deixa algumas pistas para encontrar essa cidade e eu decidi segui-las!</p>
+        <p>Durante uma tarde chuvosa, ao folhear um livro antigo na biblioteca, você encontra uma carta misteriosa. Ela fala de uma cidade perdida, repleta de riquezas escondidas por civilizações antigas. A primeira pista leva à Itália!</p>
         <button class="btn-proximo" data-proximo="1">Começar na Itália</button>
-        <button class="btn-proximo" data-proximo="2">Ir direto para o Brasil (Pernambuco)</button>
     </div>
 
-    <!-- Passo 1: Início na Itália -->
+    <!-- Passo 1: Itália -->
     <div class="passo" id="passo-1">
-        <img src="img/cenario-passo1-italia.png" alt="Paisagem da Itália">
-        <p>Sua jornada começa na ensolarada Itália! A carta menciona uma antiga vila na Toscana, escondida entre colinas e vinhedos. Você encontra um pergaminho com um símbolo que parece um mapa do tesouro, indicando que a próxima pista está no Brasil.</p>
-        <button class="btn-proximo" data-proximo="1.5">Seguir para o Rio de Janeiro</button>
-        <button class="btn-proximo" data-proximo="3">Ir direto para Pernambuco</button>
+        <img src="img/cenario-passo1-italia.png" alt="Vila na Toscana, Itália">
+        <p>Na ensolarada Toscana, você encontra uma vila antiga cercada por vinhedos. Em uma ruína, há um mosaico com o símbolo de uma montanha — e uma mensagem: “O próximo passo está além do oceano”. O mapa indica o Rio de Janeiro!</p>
+        <button class="btn-proximo" data-proximo="2">Seguir para o Rio de Janeiro</button>
     </div>
 
-    <!-- Passo 1.5: Chegada no Rio de Janeiro -->
-    <div class="passo" id="passo-1.5">
-        <img src="img/cenario-passo1.5-rio.png" alt="Cristo Redentor, Rio de Janeiro">
-        <p>Você desembarca no Rio de Janeiro! A carta sugere que um segredo pode estar escondido em um dos cartões postais da cidade. Uma pista encontrada perto do Pão de Açúcar aponta para o Sul do Brasil.</p>
-        <button class="btn-proximo" data-proximo="1.6">Seguir para o Paraná</button>
-        <button class="btn-proximo" data-proximo="3">Seguir para Pernambuco</button>
-    </div>
-
-    <!-- Passo 1.6: Chegada no Paraná -->
-    <div class="passo" id="passo-1.6">
-        <img src="img/cenario-passo1.6-parana.png" alt="Cataratas do Iguaçu, Paraná">
-        <p>No Paraná, a grandiosidade das Cataratas do Iguaçu te impressiona. Uma antiga lenda local, mencionada na sua carta, fala sobre um caminho escondido próximo a uma forte queda d'água. Essa pista te leva ao norte do país!</p>
-        <button class="btn-proximo" data-proximo="6">Viajar para o Amazonas</button>
-    </div>
-
-    <!-- Passo 2: Início em Pernambuco -->
+    <!-- Passo 2: Rio de Janeiro -->
     <div class="passo" id="passo-2">
-        <img src="img/cenario-passo2-olinda.png" alt="Olinda, Pernambuco">
-        <p>Você desembarca em Pernambuco, na histórica cidade de Olinda. A carta sugere que a entrada para a cidade perdida pode estar ligada a um local de grande beleza e história. Onde você procura a próxima pista?</p>
-        <button class="btn-proximo" data-proximo="4">Investigar as igrejas antigas</button>
-        <button class="btn-proximo" data-proximo="5">Explorar as praias próximas</button>
+        <img src="img/cenario-passo1.5-rio.png" alt="Cristo Redentor, Rio de Janeiro">
+        <p>Ao chegar no Rio, você visita o Pão de Açúcar e encontra uma inscrição antiga gravada na rocha: “A força da natureza guarda o segredo final”. Um viajante menciona uma pista escondida nas cataratas do Sul do Brasil.</p>
+        <button class="btn-proximo" data-proximo="3">Viajar para o Paraná</button>
     </div>
 
-    <!-- Passo 3: Chegada no Brasil (Pernambuco) - Rota da Itália -->
+    <!-- Passo 3: Paraná -->
     <div class="passo" id="passo-3">
-        <img src="img/cenario-passo3-chegada-brasil.png" alt="Mapa do Brasil com destino a Pernambuco">
-        <p>Você chega ao Brasil, mais precisamente em Pernambuco. A carta agora aponta para a charmosa Olinda como ponto de partida para desvendar o próximo segredo.</p>
-        <button class="btn-proximo" data-proximo="4">Investigar as igrejas antigas de Olinda</button>
-        <button class="btn-proximo" data-proximo="5">Explorar as praias de Olinda</button>
+        <img src="img/cenario-passo1.6-parana.png" alt="Cataratas do Iguaçu, Paraná">
+        <p>No Paraná, as Cataratas do Iguaçu rugem como guardiãs antigas. Atrás de uma das quedas, você descobre uma gruta secreta com inscrições que falam da “Cidade Esmeralda” — o destino final da sua jornada!</p>
+        <p><strong>Fim da primeira parte da aventura!</strong></p>
+        <button class="btn-proximo voltar" data-proximo="0">Recomeçar</button>
     </div>
 
-    <!-- Passo 4: Igrejas de Olinda -->
-    <div class="passo" id="passo-4">
-        <img src="img/cenario-passo4-igrejas-olinda.png" alt="Interior de uma igreja antiga em Olinda">
-        <p>Nas igrejas antigas de Olinda, um segredo é revelado! Atrás de um altar empoeirado, você encontra um mapa antigo. Ele aponta para um novo destino: o coração verdejante do Brasil, o Amazonas.</p>
-        <button class="btn-proximo" data-proximo="6">Viajar para o Amazonas</button>
-    </div>
-
-    <!-- Passo 5: Praias de Olinda -->
-    <div class="passo" id="passo-5">
-        <img src="img/cenario-passo5-praias-olinda.png" alt="Praia em Olinda">
-        <p>Explorando as belas praias de Olinda, você encontra uma caverna escondida pela maré. Infelizmente, ela leva a um beco sem saída. Parece que essa não era a pista certa.</p>
-        <button class="btn-proximo voltar" data-proximo="2">Voltar e explorar as igrejas</button>
-    </div>
-
-    <!-- Passo 6: Chegada no Amazonas -->
-    <div class="passo" id="passo-6">
-        <img src="img/cenario-passo6-amazonas.png" alt="Rio Amazonas">
-        <p>O Amazonas! A busca pela cidade perdida se intensifica em meio à imensidão da floresta. Você se depara com
+    <script src="script.js"></script>
+</body>
+</html>
