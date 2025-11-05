@@ -1,5 +1,6 @@
 body {
-    background-color: #1D4221;
+    /* Um tom de verde um pouco mais terroso, que pode lembrar campos ou florestas */
+    background-color: #2E5E33; 
     color: white;
     font-family: "Bai Jamjuree", sans-serif;
     display: flex;
@@ -10,7 +11,44 @@ body {
 }
 
 button {
-    background-color: #64A712;
+    /* Um verde um pouco mais vibrante, como a vegetação mais exuberante */
+    background-color: #5CAF2C; 
     color: white;
     font-family: "Bai Jamjuree", sans-serif;
+    /* Adicionando um pouco de padding para os botões ficarem mais convidativos */
+    padding: 10px 20px;
+    border: none; /* Removendo a borda padrão */
+    cursor: pointer; /* Indicando que é clicável */
+    border-radius: 5px; /* Cantos arredondados */
+    transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+button:hover {
+    background-color: #4CAF50; /* Um verde um pouco mais escuro ao passar o mouse */
+}
+
+.passo {
+    display: none;
+    /* Centralizando o conteúdo dentro de cada passo, se necessário */
+    text-align: center; 
+    padding: 20px;
+    max-width: 600px; /* Limitando a largura do conteúdo para melhor leitura */
+}
+
+.passo.ativo {
+    display:block;
+}
+
+/* Estilizando a imagem dentro do passo, se quiser */
+.passo img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o container */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+    border-radius: 8px; /* Cantos arredondados para a imagem */
+}
+
+/* Estilizando os parágrafos dentro do passo */
+.passo p {
+    font-size: 1.1em; /* Um pouco maior para melhor leitura */
+    line-height: 1.6; /* Espaçamento entre linhas */
 }
