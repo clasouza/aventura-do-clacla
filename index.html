@@ -1,83 +1,88 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> <!-- Mantenha seu CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <title>A Saga da Família Rossi</title>
+    <title>A Busca pela Cidade Perdida</title>
+    <style>
+        /* Estilos básicos para a demonstração */
+        body { font-family: sans-serif; text-align: center; margin: 20px; background-color: #f4f4f4; }
+        .passo { display: none; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .passo img { max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 15px; }
+        .passo p { font-size: 1.1em; line-height: 1.5; color: #333; }
+        .btn-proximo { padding: 10px 20px; margin: 5px; font-size: 1em; cursor: pointer; background-color: #4CAF50; color: white; border: none; border-radius: 5px; transition: background-color 0.3s ease; }
+        .btn-proximo:hover { background-color: #45a049; }
+        .btn-proximo.voltar { background-color: #f44336; }
+        .btn-proximo.voltar:hover { background-color: #da190b; }
+        .passo.ativo { display: block; }
+    </style>
 </head>
 <body>
-    <main>
-        <!-- PASSO 0: Introdução - A Descoberta -->
-        <div class="passo ativo" id="passo-0">
-            <img src="img/italia_mapa.png" alt="Mapa antigo da Itália"> <!-- Sugestão de imagem -->
-            <p>Tudo começou com uma velha caixa de documentos da minha avó, uma imigrante italiana. Entre cartas e fotos, encontrei um diário com anotações sobre um segredo de família, algo que ela deixou para trás na Itália e que a levou a vir para o Brasil. A última entrada falava de uma pista escondida em um local especial no Paraná.</p>
-            <button class="btn-proximo" data-proximo="1">Começar pela Itália</button>
-            <button class="btn-proximo" data-proximo="2">Ir direto para o Paraná</button>
-        </div>
 
-        <!-- PASSO 1: A Itália - A Primeira Pista -->
-        <div class="passo" id="passo-1">
-            <img src="img/roma_coliseu.png" alt="Coliseu em Roma"> <!-- Sugestão de imagem -->
-            <p>A primeira pista aponta para Roma! Diz o diário que devo procurar algo relacionado aos ancestrais na cidade eterna. Onde será que a pista está? Talvez em um dos monumentos históricos?</p>
-            <button class="btn-proximo" data-proximo="3">Investigar o Coliseu</button>
-            <button class="btn-proximo" data-proximo="4">Procurar em uma igreja antiga</button>
-        </div>
+    <h1>A Busca pela Cidade Perdida</h1>
 
-        <!-- PASSO 2: Paraná - O Início da Busca -->
-        <div class="passo" id="passo-2">
-            <img src="img/curitiba_jardim_botanico.png" alt="Jardim Botânico de Curitiba"> <!-- Sugestão de imagem -->
-            <p>Decido que a melhor maneira de honrar minha avó é ir direto para onde ela construiu sua nova vida: o Paraná. A carta menciona uma cidade específica com fortes laços com a imigração italiana. Qual cidade será?</p>
-            <button class="btn-proximo" data-proximo="5">Ir para Curitiba</button>
-            <button class="btn-proximo" data-proximo="6">Ir para a Serra Gaúcha (com forte colonização italiana, mas vamos focar no PR)</button>
-            <!-- Notei que você mencionou "até o Paraná", então deixei a opção de ir direto para o PR. Se quiser focar em outro estado com imigração italiana antes do PR, podemos ajustar! -->
-        </div>
+    <!-- Passo 0: Introdução -->
+    <div class="passo ativo" id="passo-0">
+        <img src="img/cenario-passo0.png" alt="Livro com uma carta antiga">
+        <p>Um dia desses, dentro de um livro da biblioteca da escola, descobri uma carta antiga sobre uma cidade perdida, escondida por riquezas e belezas naturais. Nessa carta, a autora deixa algumas pistas para encontrar essa cidade e eu decidi segui-las!</p>
+        <button class="btn-proximo" data-proximo="1">Começar na Itália</button>
+        <button class="btn-proximo" data-proximo="2">Ir direto para o Brasil (Pernambuco)</button>
+    </div>
 
-        <!-- PASSO 3: Roma - A Pista do Coliseu -->
-        <div class="passo" id="passo-3">
-            <img src="img/inscricao_antiga.png" alt="Inscrição antiga em pedra"> <!-- Sugestão de imagem -->
-            <p>No Coliseu, encontro uma inscrição quase apagada, falada em um dialeto antigo. Com muito esforço, decifro que a próxima pista está ligada a um local de "encontro de culturas" no Brasil, no estado do Paraná.</p>
-            <button class="btn-proximo" data-proximo="7">Seguir para o Paraná</button>
-        </div>
+    <!-- Passo 1: Início na Itália -->
+    <div class="passo" id="passo-1">
+        <img src="img/cenario-passo1-italia.png" alt="Paisagem da Itália">
+        <p>Sua jornada começa na ensolarada Itália! A carta menciona uma antiga vila na Toscana, escondida entre colinas e vinhedos. Você encontra um pergaminho com um símbolo que parece um mapa do tesouro, indicando que a próxima pista está no Brasil.</p>
+        <button class="btn-proximo" data-proximo="1.5">Seguir para o Rio de Janeiro</button>
+        <button class="btn-proximo" data-proximo="3">Ir direto para Pernambuco</button>
+    </div>
 
-        <!-- PASSO 4: Roma - Desistir -->
-        <div class="passo" id="passo-4">
-            <img src="img/desistir_roma.png" alt="Pessoa pensativa em Roma"> <!-- Sugestão de imagem -->
-            <p>A busca na Itália parece muito complexa. Talvez a história não seja tão importante quanto eu pensava. Decido focar na minha vida aqui e deixo o passado para trás.</p>
-            <!-- Fim da aventura -->
-        </div>
+    <!-- Passo 1.5: Chegada no Rio de Janeiro -->
+    <div class="passo" id="passo-1.5">
+        <img src="img/cenario-passo1.5-rio.png" alt="Cristo Redentor, Rio de Janeiro">
+        <p>Você desembarca no Rio de Janeiro! A carta sugere que um segredo pode estar escondido em um dos cartões postais da cidade. Uma pista encontrada perto do Pão de Açúcar aponta para o Sul do Brasil.</p>
+        <button class="btn-proximo" data-proximo="1.6">Seguir para o Paraná</button>
+        <button class="btn-proximo" data-proximo="3">Seguir para Pernambuco</button>
+    </div>
 
-        <!-- PASSO 5: Curitiba - A Busca Continua -->
-        <div class="passo" id="passo-5">
-            <img src="img/museu_imigracao.png" alt="Museu da Imigração em Curitiba"> <!-- Sugestão de imagem -->
-            <p>Chego em Curitiba, a capital do Paraná. Lembro que minha avó falava muito sobre o Museu da Imigração. Talvez a pista esteja lá, conectando as histórias da Itália com o Paraná.</p>
-            <button class="btn-proximo" data-proximo="8">Explorar o Museu da Imigração</button>
-            <button class="btn-proximo" data-proximo="9">Visitar a Ópera de Arame</button>
-        </div>
+    <!-- Passo 1.6: Chegada no Paraná -->
+    <div class="passo" id="passo-1.6">
+        <img src="img/cenario-passo1.6-parana.png" alt="Cataratas do Iguaçu, Paraná">
+        <p>No Paraná, a grandiosidade das Cataratas do Iguaçu te impressiona. Uma antiga lenda local, mencionada na sua carta, fala sobre um caminho escondido próximo a uma forte queda d'água. Essa pista te leva ao norte do país!</p>
+        <button class="btn-proximo" data-proximo="6">Viajar para o Amazonas</button>
+    </div>
 
-        <!-- PASSO 6: Serra Gaúcha (Opção a ser ajustada se não for o foco) -->
-        <div class="passo" id="passo-6">
-            <p>A Serra Gaúcha é linda e tem muita história italiana, mas o diário parecia indicar algo mais específico no Paraná. Melhor voltar e focar na pista original.</p>
-            <button class="btn-proximo" data-proximo="5">Ir para Curitiba</button>
-        </div>
+    <!-- Passo 2: Início em Pernambuco -->
+    <div class="passo" id="passo-2">
+        <img src="img/cenario-passo2-olinda.png" alt="Olinda, Pernambuco">
+        <p>Você desembarca em Pernambuco, na histórica cidade de Olinda. A carta sugere que a entrada para a cidade perdida pode estar ligada a um local de grande beleza e história. Onde você procura a próxima pista?</p>
+        <button class="btn-proximo" data-proximo="4">Investigar as igrejas antigas</button>
+        <button class="btn-proximo" data-proximo="5">Explorar as praias próximas</button>
+    </div>
 
-        <!-- PASSO 7: Paraná - A Pista da Itália -->
-        <div class="passo" id="passo-7">
-            <img src="img/mapa_parana.png" alt="Mapa antigo do Paraná"> <!-- Sugestão de imagem -->
-            <p>A pista da Itália me trouxe para o Paraná! Agora preciso descobrir qual é esse "encontro de culturas" que minha avó mencionou. Onde as histórias da Itália se encontram com a terra paranaense?</p>
-            <button class="btn-proximo" data-proximo="8">Explorar o Museu da Imigração em Curitiba</button>
-            <button class="btn-proximo" data-proximo="10">Visitar uma colônia italiana no interior</button>
-        </div>
+    <!-- Passo 3: Chegada no Brasil (Pernambuco) - Rota da Itália -->
+    <div class="passo" id="passo-3">
+        <img src="img/cenario-passo3-chegada-brasil.png" alt="Mapa do Brasil com destino a Pernambuco">
+        <p>Você chega ao Brasil, mais precisamente em Pernambuco. A carta agora aponta para a charmosa Olinda como ponto de partida para desvendar o próximo segredo.</p>
+        <button class="btn-proximo" data-proximo="4">Investigar as igrejas antigas de Olinda</button>
+        <button class="btn-proximo" data-proximo="5">Explorar as praias de Olinda</button>
+    </div>
 
-        <!-- PASSO 8: Museu da Imigração - A Descoberta -->
-        <div class="passo" id="passo-8">
-            <img src="img/diario_aberto.png" alt="Diário aberto com fotos antigas"> <!-- Sugestão de imagem -->
-            <p>No Museu da Imigração, encontro uma seção dedicada à minha cidade natal na Itália. Atrás de uma foto antiga da minha avó, descubro um pequeno compartimento secreto. Dentro, há uma carta que revela o verdadeiro segredo de família: uma pequena herança deixada para mim, e a história de como ela foi escondida para proteger a família.</p>
-            <button class="btn-proximo" data-proximo="11">Revelar o segredo</button>
-        </div>
+    <!-- Passo 4: Igrejas de Olinda -->
+    <div class="passo" id="passo-4">
+        <img src="img/cenario-passo4-igrejas-olinda.png" alt="Interior de uma igreja antiga em Olinda">
+        <p>Nas igrejas antigas de Olinda, um segredo é revelado! Atrás de um altar empoeirado, você encontra um mapa antigo. Ele aponta para um novo destino: o coração verdejante do Brasil, o Amazonas.</p>
+        <button class="btn-proximo" data-proximo="6">Viajar para o Amazonas</button>
+    </div>
 
-        <!-- PASSO 9: Ópera de Arame - Pista Falsa -->
-        <div class="passo" id="passo-9">
+    <!-- Passo 5: Praias de Olinda -->
+    <div class="passo" id="passo-5">
+        <img src="img/cenario-passo5-praias-olinda.png" alt="Praia em Olinda">
+        <p>Explorando as belas praias de Olinda, você encontra uma caverna escondida pela maré. Infelizmente, ela leva a um beco sem saída. Parece que essa não era a pista certa.</p>
+        <button class="btn-proximo voltar" data-proximo="2">Voltar e explorar as igrejas</button>
+    </div>
+
+    <!-- Passo 6: Chegada no Amazonas -->
+    <div class="passo" id="passo-6">
+        <img src="img/cenario-passo6-amazonas.png" alt="Rio Amazonas">
+        <p>O Amazonas! A busca pela cidade perdida se intensifica em meio à imensidão da floresta. Você se depara com
