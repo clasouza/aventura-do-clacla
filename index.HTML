@@ -3,32 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Mantenha seu CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <title>Em busca da cidade perdida</title>
+    <title>A Saga da Família Rossi</title>
 </head>
 <body>
     <main>
+        <!-- PASSO 0: Introdução - A Descoberta -->
         <div class="passo ativo" id="passo-0">
-            <img src="cenario-italia.png" alt="Cenário inicial na Itália">
-            <p>Um dia desses, folheando um antigo atlas na biblioteca, encontrei uma carta misteriosa sobre uma cidade perdida, um tesouro escondido entre montanhas e lagos na Europa. A carta trazia pistas enigmáticas e, claro, decidi embarcar nessa aventura!</p>
-            <button class="btn-proximo" data-proximo="1">Ir para a Itália</button>
-            <button class="btn-proximo" data-proximo="2">Ir para o Paraná</button>
+            <img src="img/italia_mapa.png" alt="Mapa antigo da Itália"> <!-- Sugestão de imagem -->
+            <p>Tudo começou com uma velha caixa de documentos da minha avó, uma imigrante italiana. Entre cartas e fotos, encontrei um diário com anotações sobre um segredo de família, algo que ela deixou para trás na Itália e que a levou a vir para o Brasil. A última entrada falava de uma pista escondida em um local especial no Paraná.</p>
+            <button class="btn-proximo" data-proximo="1">Começar pela Itália</button>
+            <button class="btn-proximo" data-proximo="2">Ir direto para o Paraná</button>
         </div>
+
+        <!-- PASSO 1: A Itália - A Primeira Pista -->
         <div class="passo" id="passo-1">
-            <p>Sua jornada começa na Itália! A primeira pista está escondida no topo de uma montanha nos Alpes, com uma vista deslumbrante.</p>
-            <button class="btn-proximo" data-proximo="3">Explorar os Alpes Italianos</button>
-            <button class="btn-proximo" data-proximo="4">Desistir e voltar para casa</button>
+            <img src="img/roma_coliseu.png" alt="Coliseu em Roma"> <!-- Sugestão de imagem -->
+            <p>A primeira pista aponta para Roma! Diz o diário que devo procurar algo relacionado aos ancestrais na cidade eterna. Onde será que a pista está? Talvez em um dos monumentos históricos?</p>
+            <button class="btn-proximo" data-proximo="3">Investigar o Coliseu</button>
+            <button class="btn-proximo" data-proximo="4">Procurar em uma igreja antiga</button>
         </div>
-        <!-- Aqui você poderia adicionar um novo passo para o Paraná -->
+
+        <!-- PASSO 2: Paraná - O Início da Busca -->
         <div class="passo" id="passo-2">
-            <p>Ou talvez sua aventura comece no coração do Paraná, explorando as Cataratas do Iguaçu!</p>
-            <button class="btn-proximo" data-proximo="5">Descobrir as Cataratas</button>
-            <button class="btn-proximo" data-proximo="6">Desistir e voltar para casa</button>
+            <img src="img/curitiba_jardim_botanico.png" alt="Jardim Botânico de Curitiba"> <!-- Sugestão de imagem -->
+            <p>Decido que a melhor maneira de honrar minha avó é ir direto para onde ela construiu sua nova vida: o Paraná. A carta menciona uma cidade específica com fortes laços com a imigração italiana. Qual cidade será?</p>
+            <button class="btn-proximo" data-proximo="5">Ir para Curitiba</button>
+            <button class="btn-proximo" data-proximo="6">Ir para a Serra Gaúcha (com forte colonização italiana, mas vamos focar no PR)</button>
+            <!-- Notei que você mencionou "até o Paraná", então deixei a opção de ir direto para o PR. Se quiser focar em outro estado com imigração italiana antes do PR, podemos ajustar! -->
         </div>
-    </main>
-    <script src="script.js"></script>
-</body>
-</html>
+
+        <!-- PASSO 3: Roma - A Pista do Coliseu -->
+        <div class="passo" id="passo-3">
+            <img src="img/inscricao_antiga.png" alt="Inscrição antiga em pedra"> <!-- Sugestão de imagem -->
+            <p>No Coliseu, encontro uma inscrição quase apagada, falada em um dialeto antigo. Com muito esforço, decifro que a próxima pista está ligada a um local de "encontro de culturas" no Brasil, no estado do Paraná.</p>
+            <button class="btn-proximo" data-proximo="7">Seguir para o Paraná</button>
+        </div>
+
+        <!-- PASSO 4: Roma - Desistir -->
+        <div class="passo" id="passo-4">
+            <img src="img/desistir_roma.png" alt="Pessoa pensativa em Roma"> <!-- Sugestão de imagem -->
+            <p>A busca na Itália parece muito complexa. Talvez a história não seja tão importante quanto eu pensava. Decido focar na minha vida aqui e deixo o passado para trás.</p>
+            <!-- Fim da aventura -->
+        </div>
+
+        <!-- PASSO 5: Curitiba - A Busca Continua -->
+        <div class="passo" id="passo-5">
+            <img src="img/museu_imigracao.png" alt="Museu da Imigração em Curitiba"> <!-- Sugestão de imagem -->
+            <p>Chego em Curitiba, a capital do Paraná. Lembro que minha avó falava muito sobre o Museu da Imigração. Talvez a pista esteja lá, conectando as histórias da Itália com o Paraná.</p>
+            <button class="btn-proximo" data-proximo="8">Explorar o Museu da Imigração</button>
+            <button class="btn-proximo" data-proximo="9">Visitar a Ópera de Arame</button>
+        </div>
+
+        <!-- PASSO 6: Serra Gaúcha (Opção a ser ajustada se não for o foco) -->
+        <div class="passo" id="passo-6">
+            <p>A Serra Gaúcha é linda e tem muita história italiana, mas o diário parecia indicar algo mais específico no Paraná. Melhor voltar e focar na pista original.</p>
+            <button class="btn-proximo" data-proximo="5">Ir para Curitiba</button>
+        </div>
+
+        <!-- PASSO 7: Paraná - A Pista da Itália -->
+        <div class="passo" id="passo-7">
+            <img src="img/mapa_parana.png" alt="Mapa antigo do Paraná"> <!-- Sugestão de imagem -->
+            <p>A pista da Itália me trouxe para o Paraná! Agora preciso descobrir qual é esse "encontro de culturas" que minha avó mencionou. Onde as histórias da Itália se encontram com a terra paranaense?</p>
+            <button class="btn-proximo" data-proximo="8">Explorar o Museu da Imigração em Curitiba</button>
+            <button class="btn-proximo" data-proximo="10">Visitar uma colônia italiana no interior</button>
+        </div>
+
+        <!-- PASSO 8: Museu da Imigração - A Descoberta -->
+        <div class="passo" id="passo-8">
+            <img src="img/diario_aberto.png" alt="Diário aberto com fotos antigas"> <!-- Sugestão de imagem -->
+            <p>No Museu da Imigração, encontro uma seção dedicada à minha cidade natal na Itália. Atrás de uma foto antiga da minha avó, descubro um pequeno compartimento secreto. Dentro, há uma carta que revela o verdadeiro segredo de família: uma pequena herança deixada para mim, e a história de como ela foi escondida para proteger a família.</p>
+            <button class="btn-proximo" data-proximo="11">Revelar o segredo</button>
+        </div>
+
+        <!-- PASSO 9: Ópera de Arame - Pista Falsa -->
+        <div class="passo" id="passo-9">
