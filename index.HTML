@@ -11,19 +11,24 @@
 </head>
 <body>
     <main>
-        <div class="passo" id="passo-0">
-            <p>Um dia desses, dentro de um livro da biblioteca da escola, eu descobri uma carta antiga sobre uma cidade perdida, escondida por riquezas e belezas naturais. Nessa carta, a autora deixa algumas pistas para encontrar essa cidade e eu decidi segui-las!</p>
-            <button class="btn-proximo" data-proximo="1">Rio de Janeiro</button>
-            <button class="btn-proximo" data-proximo="2">Pernambuco</button>
+        <div class="passo ativo" id="passo-0">
+            <img src="cenario-italia.png" alt="Cenário inicial na Itália">
+            <p>Um dia desses, folheando um antigo atlas na biblioteca, encontrei uma carta misteriosa sobre uma cidade perdida, um tesouro escondido entre montanhas e lagos na Europa. A carta trazia pistas enigmáticas e, claro, decidi embarcar nessa aventura!</p>
+            <button class="btn-proximo" data-proximo="1">Ir para a Itália</button>
+            <button class="btn-proximo" data-proximo="2">Ir para o Paraná</button>
         </div>
         <div class="passo" id="passo-1">
-            <p>Você começa sua jornada no Rio de Janeiro, subindo o Pico da Tijuca ao amanhecer para encontrar a primeira pista.</p>
-            <button class="btn-proximo" data-proximo="3">Procurar a pista no topo do pico</button>
+            <p>Sua jornada começa na Itália! A primeira pista está escondida no topo de uma montanha nos Alpes, com uma vista deslumbrante.</p>
+            <button class="btn-proximo" data-proximo="3">Explorar os Alpes Italianos</button>
             <button class="btn-proximo" data-proximo="4">Desistir e voltar para casa</button>
         </div>
+        <!-- Aqui você poderia adicionar um novo passo para o Paraná -->
+        <div class="passo" id="passo-2">
+            <p>Ou talvez sua aventura comece no coração do Paraná, explorando as Cataratas do Iguaçu!</p>
+            <button class="btn-proximo" data-proximo="5">Descobrir as Cataratas</button>
+            <button class="btn-proximo" data-proximo="6">Desistir e voltar para casa</button>
+        </div>
     </main>
-
-
-
+    <script src="script.js"></script>
 </body>
 </html>
